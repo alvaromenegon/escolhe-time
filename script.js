@@ -12,13 +12,13 @@ function gerarColaboradores() {
     var qtdA = 0;
 
     var colaboradores = []
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 7; i++) {
         while (true) {
             var profile = perfilColaboradores[Math.floor(Math.random() * perfilColaboradores.length)]
-            if ((profile === 'Comunicador' && qtdC < 2) || 
-                (profile === 'Planejador' && qtdP < 2) || 
-                (profile === 'Executor' && qtdE < 2) || 
-                (profile === 'Analista' && qtdA < 2)) {
+            if ((profile === 'Comunicador' && qtdC < 3) || 
+                (profile === 'Planejador' && qtdP < 3) || 
+                (profile === 'Executor' && qtdE < 3) || 
+                (profile === 'Analista' && qtdA < 3)) {
                 switch (profile) {
                     case 'Comunicador':
                         qtdC++
@@ -72,5 +72,5 @@ function main(){
     document.getElementById('btn').setAttribute('disabled', true);
     gerarColaboradores();
     gerarTarefas();
-    document.getElementById('time').style.display = 'block';
+    document.getElementById('enable').style.display = 'block';
 }
