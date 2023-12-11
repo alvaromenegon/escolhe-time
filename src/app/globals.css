@@ -1,0 +1,15 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @media(max-width: 40rem){
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.button-delete{
+    padding: 0.15rem 0.275rem !important;
+    border: none;
+}
